@@ -100,6 +100,24 @@ header nav ul{
     width: 100%;
 }
 
+header nav .menu li a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: calc(var(--padding)*2);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a{
+    border-bottom: 0;
+}
+
+header nav .menu li .activo, header nav .menu li a:hover{
+  color: var(--color-principal);
+  font-weight: bold;
+}
 /*Final header*/
 
 /* mediaqueries*/
@@ -110,9 +128,25 @@ header nav ul{
 @media(min-width:768px){
     header .nav-top a span{
         display: inline;
-        color: #ffff;
+        color: #ffffff;
         font-size: 120%;
         margin-left: 5px;
     }
 }
-@media(min-width:1004px){}
+@media(min-width:1004px){
+    header nav .hamburguesa{
+        display: none;
+    }
+    header nav ul{
+        width: auto;
+    }
+    header nav menu li{
+        display: inline-block;
+    }
+    header nav menu li a{
+        border-bottom: 0;
+    }
+    header{
+        box-shadow: 0px/*x*/ 1px/*y*/ 10px/*grado difuminado*/ grey;
+    }
+}
