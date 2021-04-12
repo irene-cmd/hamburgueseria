@@ -44,7 +44,7 @@ body{
 /*Inicio header*/
 header .nav-top{
     background-color: var(--color-secundario);
-    padding: calc(var(--margin-grid)*2)0px;
+    padding: calc(var(--margin-grid)*2) 0px;
 }
 
 header .nav-top .container{
@@ -52,4 +52,67 @@ header .nav-top .container{
     justify-content: space-around;
 }
 
+header .nav-top a span{
+    display: none;
+}
+
+header .nav-top a i{
+    font-size: 150%;
+}
+
+header .nav-top a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+header nav{
+padding: calc(var(--padding * 2));
+}
+
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+header nav .logo{
+    width: 50%;
+}
+
+header nav .logo img{
+max-width: 6.250em;
+}
+
+header nav .hamburguesa{
+    cursor: pointer;
+    width: 50%;
+    
+}
+
+header nav .hamburguesa div{
+    border-top: 2px solid #aaa;
+    margin-bottom: var(--padding);
+    width: 1.875em;
+    
+}
+
+header nav ul{
+    width: 100%;
+}
+
 /*Final header*/
+
+/* mediaqueries*/
+
+@media(min-width:600px){
+
+}
+@media(min-width:768px){
+    header .nav-top a span{
+        display: inline;
+        color: #ffff;
+        font-size: 120%;
+        margin-left: 5px;
+    }
+}
+@media(min-width:1004px){}
