@@ -26,7 +26,7 @@ html {
 }
 
 img{
-    width: 100;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -288,6 +288,44 @@ main #ourservices article>div .fas{
     transform: rotateY(180deg);
 }
 /*Final ourservices*/
+
+/*Inicio about us*/
+main section:last-child{
+    padding-bottom: 90px;
+}
+
+main section h4{
+    margin: var(--padding) 0;
+    color: var(--color-principal);
+}
+
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+main section .flex .columna{
+    padding: var(--margin-grid);
+}
+
+
+main .imagen .marco{
+    border: solid var(--color-principal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main .imagen .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main .imagen:hover .marco{
+    transform: rotateZ(0deg);
+}
+
+main .imagen:hover .marco .imagen{
+    transform: rotateZ(0deg);
+}
 /* mediaqueries*/
 
 @media(min-width:600px){
@@ -301,6 +339,12 @@ main #ourservices article>div .fas{
     main #ourservices .grid article{
     border-bottom: 1px solid #aaa;
     padding: 1.5em;
+}
+    main section .flex .columna{
+    margin: 0 (var(--margin-grid));
+}
+main section .flex{
+    flex-direction: row;
 }
 }
 
