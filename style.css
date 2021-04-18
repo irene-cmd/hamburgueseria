@@ -1,0 +1,486 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+/*
+font-family: 'Handlee', cursive;
+font
+-family: 'Montserrat', sans-serif;
+*/
+html {
+    /* Para generar scroll animados de puntos de ancla */
+    scroll-behavior:smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+/*defino variables que se van a repetir en mi codigo*/
+--color-principal:#fa573a;
+--color-secundario:#21242e;
+--fuente-principal:'Montserrat', sans-serif;
+--fuente-secundaria:'Handlee', cursive;
+--fontsize:1em;
+--anchomaximo:68.750em;
+--margin-grid:1em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+main p{
+    color: #666;
+}
+
+body{
+    font-family:var(--fuente-principal);
+    font-size: var(--fontsize);
+}
+
+.container{
+    max-width: var(--anchomaximo);
+    margin:0 auto;
+}
+
+/*Inicio header*/
+header .nav-top{
+    background-color: var(--color-secundario);
+    padding: calc(var(--margin-grid)*2) 0px;
+}
+
+header .nav-top .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a span{
+    display: none;
+}
+
+header .nav-top a i{
+    font-size: 150%;
+}
+
+header .nav-top a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+header nav{
+padding: calc(var(--padding * 2));
+}
+
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav .logo{
+    width: 50%;
+}
+
+header nav .logo img{
+max-width: 6.250em;
+}
+
+header nav .hamburguesa{
+    cursor: pointer;
+    width: 50%;
+    
+}
+
+header nav .hamburguesa div{
+    border-top: 2px solid #aaa;
+    margin-bottom: var(--padding);
+    width: 1.875em;
+    
+}
+
+header nav ul{
+    width: 100%;
+}
+
+header nav .menu li a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: calc(var(--padding)*2);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a{
+    border-bottom: 0;
+}
+
+header nav .menu li .activo, header nav .menu li a:hover{
+  color: var(--color-principal);
+  transition: 0.5s;
+}
+/*Final header*/
+
+/*Inicio footer*/
+footer{
+    background-color: var(--color-secundario);
+    padding: calc(var(--padding)*2) 0px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--color-principal);
+}
+
+.flecha a{
+    display: block;
+    color: var(--color-principal);
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    font-size: 300%;
+}
+/*Final footer*/
+
+/*Inicio hero*/
+.hero{
+    background-image: url('../images/fondo.jpg');
+    height: 60vh;
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    background-color: #777;
+    background-blend-mode: multiply;
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+.hero h1{
+    font-family: var(--fuente-secundaria);
+    font-size: 2.25em;
+}
+.hero h2{
+  color: var(--color-principal);  
+  font-size: 1.25em;
+  margin: var(margin-grid) 0px;
+}
+.hero p{
+    font-size: 1.15em;
+}
+.hero .social li{
+    display: inline-block;
+    margin-right: var(--margin-grid);
+    font-size: 2em;
+}
+.hero .social li a{
+    color: white;
+}
+.boton{
+    background-color: var(--color-principal);
+    color: white;
+    display: inline-block;
+    padding: 1.15em;
+    margin: var(--margin-grid) 0px;
+    text-decoration: none;
+    border:1px solid var(--color-principal);
+}
+.boton :hover{
+    background-color: transparent;
+    border:1px solid var(--color-principal);
+}
+.boton :hover i{
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+/*Final hero*/
+
+/*Inicio Menu.html*/
+
+body, .menu2{
+    background-color: var(--color-secundario);
+    display: flex;
+}
+
+.underline, .sinsombra{
+    color: var(--color-principal);
+}
+
+.enlace{
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+div h2, .hoy{
+    color: white;
+    font-weight: bold;
+}
+
+div h3, .plato{
+    color: white;
+    font-weight: bold;
+}
+
+div p, .ofertas{
+    color: white;
+}
+
+div,.precio{
+    color: var(--color-principal);
+}
+
+div, ul, .comidas, li a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+/*Final Menu.html*/
+
+/*Inicio Blog*/
+
+body{
+    background-color: white;
+    display: flex;
+}
+
+h2, .tituloblog{
+    color: black;
+}
+
+.underline{
+    color: var(--color-principal);
+}
+
+h3, .epigrafe{
+    color: black;
+}
+
+h4{
+color: var(--color-principal);
+font-weight: bold;
+}
+
+p, .fotografia{
+    color: grey;
+}
+
+.enlace{
+    color: var(--color-principal);
+}
+/*Final Blog*/
+
+/*Inicio our services*/
+
+main section{
+    padding: 2.125em 1.5em;
+}
+
+main section h2{
+color: black;
+font-family: var(--fuente-secundaria);
+font-size: 2em;
+text-align: center;
+}
+
+main section h2 span{
+    color: var(--color-principal);
+}
+
+main section .underline{
+    position: relative;
+    width:6.250em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-align: center;
+    margin-top: calc(var(--margin-grid)*1.5);
+}
+
+main section .underline hr{
+    position: absolute;
+    width: 100%;
+    top:-1px;
+    border-color: var(--color-principal);
+}
+
+main #ourservices .grid{
+display: grid;
+gap: var(--margin-grid);
+}
+
+main #ourservices .grid article{
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main section h3{
+    font-weight: 700;
+    font-size: 1.10em;
+    margin: var(--padding) 0;
+}
+
+.enlace{
+  text-decoration: none;
+  padding-top: var(--padding);
+  display: inline-block;
+ font-weight: 700;
+ color: var(--color-principal);
+}
+
+.enlace i{
+    transition: 0.5s;
+}
+
+.enlace:hover i{
+    transform: translateX(5px);
+}
+
+main #ourservices article>div .fas{
+    color: var(--color-principal);
+    font-size: 1.5em;
+    border: 1px solid var(--color-principal);
+    padding: 0.5em;
+}
+
+.fa-truck{
+    transform: rotateY(180deg);
+}
+/*Final ourservices*/
+
+/*Inicio about us*/
+main section:last-child{
+    padding-bottom: 90px;
+}
+
+main section h4{
+    margin: var(--padding) 0;
+    color: var(--color-principal);
+}
+
+main section .flex{
+    display: flex;
+    flex-direction: column;
+}
+main section .flex .columna{
+    padding: var(--margin-grid);
+}
+
+
+main .imagen .marco{
+    border: solid var(--color-principal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main .imagen .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main .imagen:hover .marco{
+    transform: rotateZ(0deg);
+}
+
+main .imagen:hover .marco .imagen{
+    transform: rotateZ(0deg);
+}
+
+
+/* mediaqueries*/
+
+@media(max-width:425px) {/*Blog.html móvil*/
+    body .container .flex{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:420px){/*Menu.html móvil*/
+ body .menu2 .container .flex{
+    flex-direction: column;
+}
+}
+
+@media(min-width:600px){
+  main #ourservices .grid{
+    grid-template-columns: repeat(2,1fr) ;
+    }
+
+  main #ourservices .grid article:last-child{
+    grid-column: 1/3;
+  }
+    main #ourservices .grid article{
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em;
+}
+    main section .flex .columna{
+    margin: 0 (var(--margin-grid));
+}
+main section .flex{
+    flex-direction: row;
+}
+}
+
+@media(min-width:768px){
+    header .nav-top a span{
+        display: inline;
+        color: #ffffff;
+        font-size: 120%;
+        margin-left: 5px;
+    }
+   main #ourservices .grid{
+       grid-template-columns: repeat(3,1fr);
+   } 
+   main #ourservices .grid article:last-child{
+    grid-column: 3/4;/*Un único elemento de un grid*/
+  }
+}
+
+@media (min-width:1009px) {/*Escritorio Blog.html*/
+    body .container .flex{
+        flex-direction: row;
+    }
+}
+
+@media(min-width:1004px) {
+    body .menu2 .container .flex {/*Escritorio Menu.html*/
+        flex-direction: row;
+    }
+}
+
+@media(min-width:1004px){
+    header nav .hamburguesa{
+        display: none;
+    }
+    header nav ul{
+        width: auto;
+    }
+    header nav menu li{
+        display: inline-block;
+    }
+    header nav menu li a{
+        border-bottom: 0;
+    }
+    header{
+        box-shadow: 0px/*x*/ 1px/*y*/ 10px/*grado difuminado*/ grey;
+    }
+    
+        footer{
+        text-align: left;
+    }
+}
